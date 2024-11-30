@@ -1,0 +1,71 @@
+{
+	"categories": [
+		{
+			"id": null, 
+			"title": "Все"
+		}, {
+			"id": 2, 
+			"title": "Мясные"
+		}, {
+			"id": 3, 
+			"title": "Вегетарианская"
+		}, {
+			"id": 4, 
+			"title": "Гриль"
+		}, {
+			"id": 5, 
+			"title": "Острые"
+		}, {
+			"id": 6, 
+			"title": "Закрытые"
+		}
+	],
+	"products": [
+		{
+			"id": 1, 
+			"categoryId": 2,
+			"img": "https://io.activecloud.com/storage/cache/data/shops/29197/47462-400x400.jpg", 
+			"name": "Чизбургер-пицца", 
+			"type": ["тонкое", "традиционное"],
+			"size": ["26 см.", "30 см.", "40 см."],
+			"price": 395,
+			"orderCount": 0
+		}, {
+			"id": 2, 
+			"categoryId": 3,
+			"img": "https://images.spasibovsem.ru/catalog/260/pitstsa-dodo-pitstsa-chizburger-otzyvy-1557423991.jpg", 
+			"name": "Сырная", 
+			"type": ["тонкое", "традиционное"],
+			"size": ["26 см.", "30 см.", "40 см."],
+			"price": 450,
+			"orderCount": 0
+		}, {
+			"id": 3, 
+			"categoryId": 4,
+			"img": "https://avatars.mds.yandex.net/i?id=be759877e65cbb1ff4f58f5e002c74723e3dc9f3-10119944-images-thumbs&n=13", 
+			"name": "Креветки по-азиатски", 
+			"type": ["тонкое", "традиционное"],
+			"size": ["26 см.", "30 см.", "40 см."],
+			"price": 290,
+			"orderCount": 0
+		}, {
+			"id": 4, 
+			"categoryId": 5,
+			"img": "https://static-actual-production.chibbis.ru/5efceade8b894caba7477dd85951d078.png", 
+			"name": "Сырный цыпленок", 
+			"type": ["тонкое", "традиционное"],
+			"size": ["26 см.", "30 см.", "40 см."],
+			"price": 385,
+			"orderCount": 0
+		}, {
+			"id": 5, 
+			"categoryId": 6,
+			"img": "https://glovo.dhmedia.io/image/menus-glovo/products/0bca3abc0eae9e6e28d6d92096d36ee567e37a6175bebb2dc4bf6b6406788b8c?t=W3siYXV0byI6eyJxIjoibG93In19LHsicmVzaXplIjp7IndpZHRoIjoyNjAsImhlaWdodCI6MjYwfX1d", 
+			"name": "Пепперони", 
+			"type": ["тонкое", "традиционное"],
+			"size": ["26 см.", "30 см.", "40 см."],
+			"price": 400,
+			"orderCount": 0
+		}
+	]
+}

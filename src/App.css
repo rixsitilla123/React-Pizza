@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #FE5F1E;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(254, 95, 30, 60%);
+}
+
+body {
+	padding: 50px;
+	background-color: #FFDF8C;
+}
+
+.productCardAddBtn:hover>span {
+	border: #FE5F1E;
+	background-color: #FE5F1E;
+	color: #fff;
+}
+
+.ant-segmented:nth-child(1) {
+	width: 240px !important;
+	padding: 5px !important;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+}
+
+.ant-segmented:nth-child(2) {
+	width: 260px !important;
+	padding: 5px !important;
+	border-bottom-left-radius: 10px !important;
+	border-bottom-right-radius: 10px !important;
+}
+
+.ant-segmented:nth-child(1)>.ant-segmented-group>.ant-segmented-item:nth-child(1)>.ant-segmented-item-label {
+	width: 130px !important;
+	padding: 10px 0 !important;
+	text-align: center;
+	color: #2C2C2C !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	line-height: 17px !important;
+	letter-spacing: 1.5% !important;
+}
+
+.ant-segmented:nth-child(1)>.ant-segmented-group>.ant-segmented-item:nth-child(2)>.ant-segmented-item-label {
+	width: 130px !important;
+	padding: 10px 0 !important;
+	text-align: center;
+	color: #2C2C2C !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	line-height: 17px !important;
+	letter-spacing: 1.5% !important;
+}
+
+.ant-segmented:nth-child(2)>.ant-segmented-group>.ant-segmented-item:nth-child(1)>.ant-segmented-item-label {
+	width: 86.3px !important;
+	padding: 10px 0 !important;
+	text-align: center;
+	color: #2C2C2C !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	line-height: 17px !important;
+	letter-spacing: 1.5% !important;
+}
+
+.ant-segmented:nth-child(2)>.ant-segmented-group>.ant-segmented-item:nth-child(2)>.ant-segmented-item-label {
+	width: 86.3px !important;
+	padding: 10px 0 !important;
+	text-align: center;
+	color: #2C2C2C !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	line-height: 17px !important;
+	letter-spacing: 1.5% !important;
+}
+
+.ant-segmented:nth-child(2)>.ant-segmented-group>.ant-segmented-item:nth-child(3)>.ant-segmented-item-label {
+	width: 86.3px !important;
+	padding: 10px 0 !important;
+	text-align: center;
+	color: #2C2C2C !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	line-height: 17px !important;
+	letter-spacing: 1.5% !important;
+}
