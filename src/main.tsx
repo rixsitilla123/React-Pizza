@@ -3,6 +3,8 @@ import App from './App.tsx'
 import { BrowserRouter } from 'react-router-dom'
 import { ProdcutsContext } from './context/Context.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Provider } from 'react-redux'
+import { store } from './store/store.tsx'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -19,9 +21,11 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById('root')!).render(
 	<BrowserRouter>
 		<QueryClientProvider client={queryClient}>
-			<ProdcutsContext>
-				<App />
-			</ProdcutsContext>
+			<Provider store={store}>
+				<ProdcutsContext>
+					<App />
+				</ProdcutsContext>
+			</Provider>
 		</QueryClientProvider>
 	</BrowserRouter>
 )

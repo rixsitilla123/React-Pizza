@@ -38,4 +38,26 @@ function ProductCardAddIcon() {
 	)
 }
 
-export { Logo, BasketIcon, TopArrowIcon, ProductCardAddIcon }
+function DeleteItemIcon() {
+	return (
+		<svg width="32.000000" height="32.000000" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs />
+			<circle id="Ellipse 1" cx="16.000000" cy="16.000000" r="16.000000" fill="#FFFFFF" fillOpacity="1.000000" />
+			<circle id="Ellipse 1" cx="16.000000" cy="16.000000" r="15.000000" stroke="#D7D7D7" strokeOpacity="1.000000" strokeWidth="2.000000" />
+			<path id="Vector" d="M19.74 17.95L17.49 15.7L19.74 13.45C20.16 13.04 20.16 12.37 19.74 11.95C19.33 11.54 18.66 11.54 18.24 11.95L16 14.2L13.75 11.95C13.33 11.54 12.66 11.54 12.25 11.95C11.83 12.37 11.83 13.04 12.25 13.45L14.5 15.7L12.25 17.95C11.83 18.36 11.83 19.04 12.25 19.45C12.66 19.86 13.33 19.86 13.75 19.45L16 17.2L18.24 19.45C18.66 19.86 19.33 19.86 19.74 19.45C20.16 19.04 20.16 18.36 19.74 17.95Z" fill="#D0D0D0" fillOpacity="1.000000" fillRule="nonzero" />
+		</svg>
+	)
+}
+
+function DeleteAllIcon() {
+	return (
+		<svg width="32.000000" height="32.000000" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs />
+			<circle id="Ellipse 1" cx="16.000000" cy="16.000000" r="16.000000" fill="#FFFFFF" fillOpacity="1.000000" />
+			<circle id="Ellipse 1" cx="16.000000" cy="16.000000" r="15.000000" stroke="#D7D7D7" strokeOpacity="1.000000" strokeWidth="2.000000" />
+			<path id="Vector" d="M19.74 17.95L17.49 15.7L19.74 13.45C20.16 13.04 20.16 12.37 19.74 11.95C19.33 11.54 18.66 11.54 18.24 11.95L16 14.2L13.75 11.95C13.33 11.54 12.66 11.54 12.25 11.95C11.83 12.37 11.83 13.04 12.25 13.45L14.5 15.7L12.25 17.95C11.83 18.36 11.83 19.04 12.25 19.45C12.66 19.86 13.33 19.86 13.75 19.45L16 17.2L18.24 19.45C18.66 19.86 19.33 19.86 19.74 19.45C20.16 19.04 20.16 18.36 19.74 17.95Z" fill="#D0D0D0" fillOpacity="1.000000" fillRule="nonzero" />
+		</svg>
+	)
+}
+
+export { Logo, BasketIcon, TopArrowIcon, ProductCardAddIcon, DeleteItemIcon, DeleteAllIcon }

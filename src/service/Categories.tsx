@@ -22,7 +22,8 @@ const Categories = () => {
 
 	const { data: categories = [] } = useQuery({
 		queryKey: ["categories"],
-		queryFn: () => useAxios().get("/categories").then(res => res.data)
+		queryFn: () => useAxios().get("/categories").then(res => res.data),
+		enabled: true
 	})
 
 	// get => query 
