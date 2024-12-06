@@ -12,7 +12,7 @@ interface ICategories {
 const Categories = () => {
 	const { setCategoryId } = useContext(Context)
 	const [isActive, setIsActive] = useState<string>("Все")
-	const [categoryText, setCategoryText] = useState<string>("")
+	const [categoryText, setCategoryText] = useState<string>("Все")
 
 	function categoryBtnClick(title: string, id: string): void {
 		setIsActive(title)

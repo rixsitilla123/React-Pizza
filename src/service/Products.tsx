@@ -22,7 +22,8 @@ const Products = () => {
 
 	const { data: products = [] } = useQuery({
 		queryKey: ["products", categoryId],
-		queryFn: () => useAxios().get("/products", { params: { categoryId } }).then(res => res.data)
+		queryFn: () => useAxios().get("/products", { params: { categoryId } }).then(res => res.data),
+		enabled: true
 	})
 
 	const [getAllProducts, setGetAllProducts] = useState<IProduct[]>(products)

@@ -29,3 +29,5 @@ export const orderSlice = createSlice({
 		}
 	}
 })
+
+export const {saveOrderProducts, deleteOrderProduct} = orderSlice.actions

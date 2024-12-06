@@ -26,7 +26,7 @@ const Header = () => {
 					<span className="inline-block w-[2px] h-[25px] bg-[#ffffff25]"></span>
 					<div className="flex items-center gap-[8px]">
 						<BasketIcon />
-						<strong className="text-white text-[16px] font-bold leading-[19px]">{orderedProducts.length > 0 && orderedProducts.length}</strong>
+						<strong className="text-white text-[16px] font-bold leading-[19px]">{orderedProducts.length == 0 ? 0 : orderedProducts.length}</strong>
 					</div>
 				</button>
 			</div>
@@ -36,3 +36,4 @@ const Header = () => {
 }
 
 export default Header
+// {orderedProducts.length > 0 && orderedProducts.length}
