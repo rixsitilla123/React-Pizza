@@ -4,7 +4,7 @@ import { TopArrowIcon } from "../assets/images/icon";
 import { Context } from "../context/Context";
 import { useQuery } from "@tanstack/react-query";
 
-interface ICategories {
+export interface ICategories {
 	id: string,
 	title: string
 }

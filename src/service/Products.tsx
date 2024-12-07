@@ -22,12 +22,23 @@ const Products = () => {
 
 	const { data: products = [] } = useQuery({
 		queryKey: ["products", categoryId],
-		queryFn: () => useAxios().get("/products", { params: { categoryId } }).then(res => res.data),
+		queryFn: () => useAxios().get("/products", { params: { categoryId: categoryId != "1" ? categoryId : null } }).then(res => res.data),
 		enabled: true
 	})
 
 	const [getAllProducts, setGetAllProducts] = useState<IProduct[]>(products)
-	useEffect(() => setGetAllProducts(products), [products])
+
+	useEffect(() => {
+		if (products) setGetAllProducts(products)
+	}, [products])
+
+	useEffect(() => {
+		const updatedProducts = getAllProducts.map((product) => {
+			const orderedProduct = orderedList.find((item) => item.id == product.id)
+			return { ...product, orderCount: orderedProduct ? orderedProduct.orderCount : 0 }
+		})
+		setGetAllProducts(updatedProducts)
+	}, [])
 
 	return (
 		<div className="flex flex-wrap justify-between gap-[35px]">

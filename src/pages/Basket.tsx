@@ -1,7 +1,7 @@
 import { BasketPageBackIcon, BasketPageIcon, DeleteAllIcon, DeleteItemIcon, Logo } from "../assets/images/icon"
 import { IProduct } from "../service/Products"
 import { useDispatch, useSelector } from "react-redux"
-import { deleteOrderProduct } from "../store/orderSlice"
+import { clearOrders, decrement, deleteOrderProduct, increment } from "../store/orderSlice"
 import { Link, useNavigate } from "react-router-dom"
 
 const Basket = () => {
@@ -14,7 +14,11 @@ const Basket = () => {
 		val += (item.price * item.orderCount)
 		return val
 	}, 0)
-
+	function handleClear() {
+		dispatch(clearOrders())
+		setTimeout(() => navigate(-1), 800)
+	}
+	
 	return (
 		<div className="mx-auto bg-white rounded-[10px] pb-[100px]">
 			<div className="mb-[65px] py-[42px] mx-[67px]">
@@ -33,7 +37,7 @@ const Basket = () => {
 						<span className="mr-[17px]"><BasketPageIcon /></span>
 						Корзина
 					</h2>
-					<button className="flex items-center space-x-2 text-[#B6B6B6]"><DeleteAllIcon /><span className="text-[16px] leading-[19px]" >Очистить корзину</span></button>
+					<button onClick={handleClear} className="flex items-center space-x-2 text-[#B6B6B6]"><DeleteAllIcon /><span className="text-[16px] leading-[19px]" >Очистить корзину</span></button>
 				</div>
 				<ul>
 					{orderedProducts.map((item: IProduct) => (
@@ -46,9 +50,9 @@ const Basket = () => {
 								</div>
 							</div>
 							<div className="flex items-center space-x-[12px]">
-								<button className="w-[32px] h-[32px] rounded-[50%] border-[2px] border-[#FE5F1E] bg-white text-[#FE5F1E] flex items-center justify-center">-</button>
+								<button onClick={() => dispatch(decrement(item))} className="w-[32px] h-[32px] rounded-[50%] border-[2px] border-[#FE5F1E] bg-white text-[#FE5F1E] flex items-center justify-center">-</button>
 								<strong className="text-[#000] text-[22px] font-bold leading-[27px] tracking-[1%]">{item.orderCount}</strong>
-								<button className="w-[32px] h-[32px] rounded-[50%] border-[2px] border-[#FE5F1E] bg-white text-[#FE5F1E] flex items-center justify-center">+</button>
+								<button onClick={() => dispatch(increment(item))} className="w-[32px] h-[32px] rounded-[50%] border-[2px] border-[#FE5F1E] bg-white text-[#FE5F1E] flex items-center justify-center">+</button>
 							</div>
 							<strong className="text-[#000] text-[22px] font-bold leading-[27px] tracking-[1%]">{item.price * item.orderCount} ₽</strong>
 							<button onClick={() => dispatch(deleteOrderProduct(item.id))} className="w-[32px] h-[32px] bg-white text-[#D0D0D0] border-[#D0D0D0] border-[1.2px] rounded-[50%] flex items-center justify-center"><DeleteItemIcon /></button>
@@ -60,7 +64,7 @@ const Basket = () => {
 					<p className="text-[#000] text-[22px] font-normal leading-[27px] tracking-[1%]">Сумма заказа: <strong className="text-[#FE5F1E] font-bold">{totalPrice} ₽</strong></p>
 				</div>
 				<div className="flex items-center justify-between">
-					<button onClick={() => navigate("/")} className="w-[210px] py-[17px] border-[1px] border-[#D3D3D3] rounded-[30px] text-center text-[#CACACA] text-[16px] font-normal leading-[19px] flex items-center justify-center gap-[15px] duration-300 hover:text-[#FE5F1E]"><BasketPageBackIcon/> Вернуться назад</button>
+					<button onClick={() => navigate("/")} className="w-[210px] py-[17px] border-[1px] border-[#D3D3D3] rounded-[30px] text-center text-[#CACACA] text-[16px] font-normal leading-[19px] flex items-center justify-center gap-[15px] duration-300 hover:text-[#FE5F1E]"><BasketPageBackIcon /> Вернуться назад</button>
 					<button className="w-[210px] py-[17px] border-[1px] bg-[#FE5F1E] border-transparent rounded-[30px] text-center text-white text-[16px] font-bold leading-[19px] duration-500 hover:bg-white hover:border-[#FE5F1E] hover:text-[#FE5F1E]">Оплатить сейчас</button>
 				</div>
 			</div>
